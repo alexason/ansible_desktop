@@ -16,11 +16,11 @@
         - tmux
         - vim
 
-  - name: Set GTK theme
-    become_user: dan
-    dconf:
-      key: "/org/gnome/desktop/interface/color-scheme"
-      value: "'prefer-dark'"
+# - name: Set GTK theme
+#   become_user: dan
+#   dconf:
+#     key: "/org/gnome/desktop/interface/color-scheme"
+#     value: "'prefer-dark'"
 
   - name: Copy wallpaper file
     copy:
