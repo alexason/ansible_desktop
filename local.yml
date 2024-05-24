@@ -11,6 +11,7 @@
         - eza #ls replacement
         - fzf #fuzzy finder
         - htop
+        - python3-psutil #to run dconf module
         - tldr
         - tmux
         - vim
