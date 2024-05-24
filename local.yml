@@ -23,11 +23,13 @@
       group: root
 
   - name: Set wallpaper
+    become_user: dan
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: Set wallpaper position
+    become_user: dan
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
