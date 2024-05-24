@@ -41,3 +41,9 @@
       dest: /home/dan/.zshrc
       owner: dan
       group: dan
+
+  - name: Set GTK theme
+    become_user: dan
+    dconf:
+      key: "/org/gnome/desktop/interface/gtk-theme"
+      value: "'Adwaita-dark'"
