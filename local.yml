@@ -34,3 +34,10 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
+
+  - name: Copy .zshrc file
+    copy:  
+      src: files/zshrc
+      dest: /home/dan/.zshrc
+      owner: dan
+      group: dan
