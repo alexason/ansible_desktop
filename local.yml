@@ -4,10 +4,13 @@
   become: true
 
   tasks:
-  - name: install htop
+  - name: Install CLI packages
     package:
-      name: htop
-
-  - name: install vim
-    package:
-      name: vim
+      name:
+        - bat #cat replacement
+        - ezac #ls replacement
+        - htop
+        - tailscale
+        - tldr
+        - tmux
+        - vim
