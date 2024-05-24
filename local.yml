@@ -16,6 +16,12 @@
         - tmux
         - vim
 
+  - name: Set GTK theme
+    become_user: dan
+    dconf:
+      key: "/org/gnome/desktop/interface/color-scheme"
+      value: "'prefer-dark'"
+
   - name: Copy wallpaper file
     copy:
       src: files/wallpaper.jpg
@@ -41,9 +47,3 @@
       dest: /home/dan/.zshrc
       owner: dan
       group: dan
-
-  - name: Set GTK theme
-    become_user: dan
-    dconf:
-      key: "/org/gnome/desktop/interface/gtk-theme"
-      value: "'Adwaita-dark'"
