@@ -4,11 +4,17 @@
   become: true
 
   tasks:
+  - name: Add Tailscale repository
+    ansible.builtin.yum_repository:
+      name: tailscale
+      description: Tailscale repo
+      baseurl: https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+
   - name: Install CLI packages
     package:
       name:
         - bat #cat replacement
-        - ezac #ls replacement
+        - eza #ls replacement
         - htop
         - tailscale
         - tldr
